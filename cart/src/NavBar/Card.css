@@ -1,0 +1,8 @@
+.formInput {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+}
+

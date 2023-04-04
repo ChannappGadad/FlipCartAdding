@@ -1,20 +1,21 @@
-import { Link} from "react-router-dom";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCartShopping} from '@fortawesome/free-solid-svg-icons';
+import "./NavBar.css";
 
-function NavBar() {
+function NavBar({setShow}) {
     return(
-        <div>
-            <header className='header' >
-                <label style={{fontSize: '30px'}}>Logo</label>
+            <nav className='header' >
+                <span onClick={() => setShow(true)}>
+                    Logo
+                </span>
                 <div className='Browserroutes'>
-
-                    <span><FontAwesomeIcon icon={faCartShopping} size="2xl" /></span><span/>
+                    <span onClick={() => setShow(false)}>
+                        <FontAwesomeIcon icon={faCartShopping} size="2xl" />
+                    </span>
                 </div>
-            </header>
+            </nav>
 
-        </div>
-    )
+    );
 }
 
 export default NavBar;

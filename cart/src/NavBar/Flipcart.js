@@ -1,9 +1,21 @@
-import "./FlipCart.css"
-function Flipcart() {
+import "./FlipCart.css";
+import items from "../DataFile";
+import Cards from "./Card";
+
+function Flipcart({handleClick}) {
+
     return(
-        <div>
-            hello
-        </div>
+        <section>
+            {
+                
+                items.map((item, index) => {
+                return(
+                   <Cards key={item.id} item={item} handleClick={handleClick}/> 
+                    )
+                })  
+            }
+        </section>
+
     )
 }
 
